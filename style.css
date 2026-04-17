@@ -3,6 +3,8 @@
   --blue-color: #1992d4;
   --white-color-2: #e1e8f0;
   --black-color: #000000;
+  --yellow-color: #f0b429;
+  --grey-color: #636363;
 }
 * {
   margin: 0;
@@ -23,85 +25,86 @@
   flex-direction: column;
   padding-top: 1rem;
 }
-.header-container-a{
+.header-container-a {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 3rem;
 }
-.search-container{
+.search-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.7rem;
 }
-.search-icon{
-  fill: var(--black-color) ;
+.search-icon {
+  fill: var(--black-color);
   width: 1.4rem;
   height: auto;
 }
 
-.search-bar{
+.search-bar {
   width: 28rem;
   height: 1.6rem;
   background-color: var(--white-color-2);
   border: none;
   border-radius: 13px;
 }
-.profile-container{
+.profile-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-.profile-icon{
+.profile-icon {
   width: 1.4rem;
   fill: var(--black-color);
   height: auto;
 }
-.profile-img-small{
+.profile-img-small {
   width: 3rem;
   height: auto;
 }
-.profile-text{
+.profile-text {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
 }
-.header-container-b{
+.header-container-b {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 3rem;
 }
-.abc-container{
+.abc-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 0.5rem;
 }
-.profile-img-large{
+.profile-img-large {
   width: 5rem;
   height: auto;
 }
-.text-a,.text-b{
+.text-a,
+.text-b {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
-.nav-profile-container ul{
+.nav-profile-container ul {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-.nav-profile-container li{
+.nav-profile-container li {
   background-color: var(--blue-color);
   border-radius: 50px;
   list-style: none;
 }
-.nav-profile-container a{
+.nav-profile-container a {
   display: inline-block;
   padding: 0.4rem 1.2rem;
   text-decoration: none;
@@ -167,4 +170,100 @@
   background-color: var(--white-color-2);
   grid-column: 2 / -1;
   grid-row: 2 / span 3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+.your-projects-container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.main h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 0.5rem;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+}
+.project {
+  background-color: var(--white-color);
+  border-radius: 13px;
+  border-left: 8px solid var(--yellow-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-container h1 {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text-container p {
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #636363;
+}
+.icon-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+}
+.icon-container svg {
+  width: 30px;
+  height: auto;
+}
+.announcements-container {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.trending-container {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.announcements-box{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.announcement-item{
+  border-bottom: 2px solid var(--grey-color);
+}
+.announcement-item:last-child {
+  border-bottom: none;
+}
+.trending-box{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.trending-item img{
+  width: 5rem;
+  height: auto;
+}
+.trending-item{
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
 }
